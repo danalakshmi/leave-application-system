@@ -1,0 +1,32 @@
+#surefire
+#Fri Nov 25 01:12:33 CST 2011
+testClassesDirectory=D\:\\PAUL\\WORK\\MyWorkspace\\workspace\\appfuse\\javaee6\\war\\target\\test-classes
+classPathUrl.4=C\:\\Users\\PAUL\\.m2\\repository\\javax\\faces\\jsf-api\\1.2\\jsf-api-1.2.jar
+classPathUrl.3=C\:\\Users\\PAUL\\.m2\\repository\\org\\apache\\geronimo\\specs\\geronimo-ejb_3.0_spec\\1.0.1\\geronimo-ejb_3.0_spec-1.0.1.jar
+classPathUrl.2=D\:\\PAUL\\WORK\\MyWorkspace\\workspace\\appfuse\\javaee6\\ejb\\target\\javaee6-ejb-1.0-SNAPSHOT.jar
+useManifestOnlyJar=true
+classPathUrl.1=D\:\\PAUL\\WORK\\MyWorkspace\\workspace\\appfuse\\javaee6\\war\\target\\classes
+reportsDirectory=D\:\\PAUL\\WORK\\MyWorkspace\\workspace\\appfuse\\javaee6\\war\\target\\surefire-reports
+classPathUrl.0=D\:\\PAUL\\WORK\\MyWorkspace\\workspace\\appfuse\\javaee6\\war\\target\\test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=D\:\\PAUL\\WORK\\MyWorkspace\\workspace\\appfuse\\javaee6\\war\\src\\test\\java
+surefireClassPathUrl.1=C\:\\Users\\PAUL\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.7.1\\surefire-api-2.7.1.jar
+surefireClassPathUrl.0=C\:\\Users\\PAUL\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.7.1\\surefire-junit3-2.7.1.jar
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=D\:\\PAUL\\WORK\\MyWorkspace\\workspace\\appfuse\\javaee6\\war\\target\\test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+includes2=**/*TestCase.java
+enableAssertions=true
+includes1=**/*Test.java
+failIfNoTests=false
+includes0=**/Test*.java
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+classPathUrl.7=C\:\\Users\\PAUL\\.m2\\repository\\javax\\servlet\\jstl\\1.2\\jstl-1.2.jar
+childDelegation=false
+classPathUrl.6=C\:\\Users\\PAUL\\.m2\\repository\\javax\\servlet\\jsp\\jsp-api\\2.1\\jsp-api-2.1.jar
+classPathUrl.5=C\:\\Users\\PAUL\\.m2\\repository\\javax\\servlet\\servlet-api\\2.5\\servlet-api-2.5.jar
