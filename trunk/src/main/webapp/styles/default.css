@@ -1,0 +1,53 @@
+.searchForm-header{
+	width: 100px;
+	text-align: right;
+	height: 25px;
+}
+
+.form-header{
+	width: 80px;
+	text-align: right;
+	line-height:30px;
+	background-color: #A7C0DC;
+	color: black;
+}
+
+.form-content{
+	width:220px;
+}
+.form-btn {
+	background-image: url('../images/btn_bg.gif');
+	background-repeat: no-repeat;
+	width: 62px;
+	height: 23px;
+	border-width: 0px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	cursor: pointer;
+	padding: 0px;
+	margin: 0px 5px;
+}
+
+.mlr-6{
+	margin-left: 6px;
+	margin-right: 6px
+}
+
+/**µ√∂®“ÂeasyUI**/
+.datagrid-body td{
+	line-height: 18px;
+}
+
+.datagrid-header .datagrid-cell{
+	line-height: 16px;
+}
+.common-form-table{
+	width: 600px;
+}
+
+.common-form-table td{
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-color: black;
+	padding: 2px;
+}

@@ -1,0 +1,15 @@
+.icon-process{
+	background:url('../images/icons/16/flag_blue.png') no-repeat;
+}
+
+.icon-process-dy{
+	background:url('../images/icons/16/flag_red.png') no-repeat;
+}
+
+.icon-comon-info{
+	background:url('../images/icons/16/info.png') no-repeat;
+}
+
+.icon-processInst{
+	background:url('../images/icons/16/processinst.png') no-repeat;
+}
