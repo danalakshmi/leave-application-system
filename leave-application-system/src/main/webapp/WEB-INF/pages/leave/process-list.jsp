@@ -14,20 +14,20 @@
   <!--
   	(function($) {
   		$(document).ready(function(){
-  			$.acflow.tableGrid('#tableList',{title:'启动流程'});  			
+  			$.acflow.tableGrid('#tableList',{title:'<spring:message code="flow.start.flow"/>'});  			
   		});
   		
   	})(jQuery);
   
 	function showDiagram(id){
 		var url='${ctx}/leave/show-diagram.do?processDefinitionId='+id;
-		parent.$.acflow.addFrameTab({title:'流程图',href:url,isReload:true,frameId:'diagramFrameID1',iconCls:'icon-process'});
+		parent.$.acflow.addFrameTab({title:'<spring:message code="flow.diagram"/>',href:url,isReload:true,frameId:'diagramFrameID1',iconCls:'icon-process'});
 	}
 	
 	function startProcess(id){
 		//var url='${ctx}/leave/show-diagram.do?processDefinitionId='+id;
 		var url='${ctx}/leave/start-process.do?processDefinitionId='+id;
-		parent.$.acflow.addFrameTab({title:'填写请假单',href:url,isReload:true,frameId:'startProcessFrameID1',iconCls:'icon-processInst'});		
+		parent.$.acflow.addFrameTab({title:'<spring:message code="flow.input.form"/>',href:url,isReload:true,frameId:'startProcessFrameID1',iconCls:'icon-processInst'});		
  	}
 	
 	-->
@@ -36,15 +36,15 @@
 <body>
 	
   	<div id="showLoading" style="margin: 10px">
-	  	<div><img src="../images/info_16.png" />当前位置：工作流管理-&gt;启动流程</div>
+	  	<div><img src="../images/info_16.png" /><spring:message code="system.current.page"/>：<spring:message code="system.menu"/>-&gt;<spring:message code="flow.start.flow"/></div>
 	  	<div style="width: 100%;height: 400px;padding-top: 6px">
 	    <table id="tableList">
 	    	<thead>
 	    		<tr>
-	    			<th field="name" width="150" align="center">名称</th>
+	    			<th field="name" width="150" align="center"><spring:message code="flow.name"/></th>
 	    			<th field="key" width="150" align="center">KEY</th>
 	    			<th field="id" width="150" align="center">ID</th>
-	    			<th field="opAction" width="150" align="center">操作</th>
+	    			<th field="opAction" width="150" align="center"><spring:message code="flow.action"/></th>
 	    		</tr>
 	    	</thead>
 	    	<tbody>
@@ -53,8 +53,8 @@
 	    			<td>${processDefinition.name}</td>
 	    			<td>${processDefinition.key}</td>
 	    			<td>${processDefinition.id}</td>
-	    			<td><a href="javascript:startProcess('${processDefinition.id}');" >启动此流程</a>
-					|&nbsp;&nbsp;<a href="javascript:showDiagram('${processDefinition.id }');" >查看流程图</a>
+	    			<td><a href="javascript:startProcess('${processDefinition.id}');" ><spring:message code="flow.start.me"/></a>
+					|&nbsp;&nbsp;<a href="javascript:showDiagram('${processDefinition.id }');" ><spring:message code="flow.view.diagram"/></a>
 	    			</td>
 	    		</tr>
 	    		</c:forEach>

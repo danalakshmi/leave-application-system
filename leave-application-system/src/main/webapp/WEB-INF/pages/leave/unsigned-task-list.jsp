@@ -13,7 +13,7 @@
   <script type="text/javascript">
   <!--
   		$(document).ready(function(){
-  			$.acflow.tableGrid('#tableList',{title:'未分配任务列表'});  		
+  			$.acflow.tableGrid('#tableList',{title:'<spring:message code="task.unasing.list"/>'});  		
   			
   		});
   		
@@ -23,7 +23,7 @@
   			
   			var row = $('#tableList').datagrid('getSelected');
 			if (row){
-				$.messager.confirm('请确认','你打算接手此- '+ row.id +' 任务吗？?',function(r){
+				$.messager.confirm('<spring:message code="task.pls.confirm"/>','<spring:message code="task.will.you.handle"/>- '+ row.id +' <spring:message code="task.num"/>',function(r){
 					if (r){
 						
 			  			$('#showLoading').showLoading();
@@ -49,17 +49,17 @@
 <body>
 	
   	<div id="showLoading" style="margin: 10px">
-	  	<div><img src="../images/info_16.png" />当前位置：工作流管理-&gt;未分配任务</div>
+	  	<div><img src="../images/info_16.png" /><spring:message code="system.current.page"/>：<spring:message code="flow.management"/>-&gt;<spring:message code="task.unasing.list"/></div>
 	  	<div style="width: 100%;height: 400px;padding-top: 6px">
 	    <table id="tableList">
 	    	<thead>
 	    		<tr>
-	    			<th field="count" width="60" align="center">编号</th>
-	    			<th field="id" width="40" align="center">ID</th>
-	    			<th field="processInstanceId" width="80" align="center">流程实例ID</th>
-	    			<th field="name" width="180" align="center">名称</th>
-	    			<th field="description" width="350" align="center">注释</th>
-	    			<th field="opAction" width="150" align="center">操作</th>
+	    			<th field="count" width="60" align="center"><spring:message code="task.num"/></th>
+	    			<th field="id" width="40" align="center"><spring:message code="task.id"/></th>
+	    			<th field="processInstanceId" width="80" align="center"><spring:message code="task.instance.id"/></th>
+	    			<th field="name" width="180" align="center"><spring:message code="task.name"/></th>
+	    			<th field="description" width="350" align="center"><spring:message code="task.desc"/></th>
+	    			<th field="opAction" width="150" align="center"><spring:message code="task.action"/></th>
 	    		</tr>
 	    	</thead>
 	    	<tbody>
@@ -70,7 +70,7 @@
 	    			<td>${task.processInstanceId}</td>
 	    			<td>${task.name }</td>
 	    			<td>${task.description }</td>
-	    			<td><a href="javascript:submitForm(${task.id});" >接手此任务</a>
+	    			<td><a href="javascript:submitForm(${task.id});" ><spring:message code="task.take.me"/></a>
 	    			</td>
 	    		</tr>
 	    		</c:forEach>

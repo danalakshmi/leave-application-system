@@ -38,7 +38,7 @@
 			    		);
 			    		parentTabs.tabs('select',taskTab.title);
 			    		*/
-			    		parent.$.acflow.addFrameTab({title:'我的任务',href:url,isReload:true,frameId:'myTaskFrame',iconCls:'icon-process'});
+			    		parent.$.acflow.addFrameTab({title:'<spring:message code="task.my.task"/>',href:url,isReload:true,frameId:'myTaskFrame',iconCls:'icon-process'});
 			    		parentTabs.tabs('close',tab.panel('options').title);
 			    	}
 			    }
@@ -58,47 +58,48 @@
 
   	<form:form method="POST" commandName="leave" action="handle-task-form.do">
 	<div id="showLoading" style="margin: 10px">
-	  	<div><img src="../images/info_16.png" />当前位置：工作流管理-&gt;任务处理</div>
+	  	<div><img src="../images/info_16.png" /><spring:message code="system.current.page"/>：<spring:message code="flow.management"/>-&gt;<spring:message code="task.handle"/></div>
 	  	<div style="width: 100%;height: 400px;padding-top: 6px">
 	  		<table cellpadding="5" cellspacing="10" bgcolor="efefef" >
 	  			<tr>
-	  				<td colspan="2" align="centre"><b>调整请假申请</b></td>
+	  				<td colspan="2" align="centre"><b><spring:message code="task.adjudgement"/></b></td>
 	  			</tr>
 	  			<tr>
-	  				<td valign="top">事由</td>
+	  				<td valign="top"><spring:message code="task.reason"/></td>
 	  				<td >
-		   				你的经理否决了你要休
+		   				<spring:message code="task.reject.action"/>
 						<c:out value="${leave.numberOfDays}" />
-						天的休假申请. <br /> 拒绝原因:
+						<spring:message code="task.leave.day"/>. <br /> 
+						<spring:message code="task.reject.reason"/>:
 						<c:out value="${leave.managerMotivation}" />
 						<form:hidden path="managerMotivation" />
 	  				</td>
 	  			</tr>
 	  			<tr>
-	  				<td>休假天数</td>
+	  				<td><spring:message code="task.leave.days"/></td>
 	  				<td>
 						<form:input	path="numberOfDays" size="1" />
 					</td>
 	  			</tr>
 	  			<tr>
-	  				<td>带薪休假？</td>
+	  				<td><spring:message code="task.pay.leave"/></td>
 	  				<td>
 						<input type="checkbox" name="vacationPay" />
 	  				</td>
 	  			</tr>
 	  			<tr>
-	  				<td>休假原因</td>
+	  				<td><spring:message code="task.leave.reson"/></td>
 	  				<td>
 	  					<form:textarea	path="vacationMotivation" />
 	  				</td>
 	  			</tr>
 	  			<tr>
-	  				<td valign="top">是否重新发给<br>经理审批？</td>
+	  				<td valign="top"><spring:message code="task.resend"/><br><spring:message code="task.resend.approve"/></td>
 	  				<td>
 	  					<label for="resendRequest1"><form:radiobutton
-							path="resendRequest" value="1" />是</label><br /> 
+							path="resendRequest" value="1" /><spring:message code="task.resend.yes"/></label><br /> 
 						<label for="resendRequest2"><form:radiobutton
-							path="resendRequest" value="0" />否</label>
+							path="resendRequest" value="0" /><spring:message code="task.resend.no"/></label>
 	  				</td>
 	  			</tr>
 	  			<tr>
@@ -108,8 +109,8 @@
 	  					<form:hidden path="employeeName" />
 						<form:hidden path="id" />
 						<form:hidden path="vacationApproved" />
-						<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="javascript:$('#leave').submit();">提交</a>
-		   				<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#leave').form('clear')">重置</a>
+						<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="javascript:$('#leave').submit();"><spring:message code="task.submit"/></a>
+		   				<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#leave').form('clear')"><spring:message code="task.reset"/></a>
 	  				</td>
 	  			</tr>
 	  		</table>

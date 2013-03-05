@@ -14,7 +14,7 @@
   <!--
   	(function($) {
   		$(document).ready(function(){
-  			$.acflow.tableGrid('#tableList',{title:'历史流程实例列表'});  			
+  			$.acflow.tableGrid('#tableList',{title:'<spring:message code="history.instance.list"/>'});  			
   		});
   		
   	})(jQuery);
@@ -24,17 +24,17 @@
 <body>
 	
   	<div id="showLoading" style="margin: 10px">
-	  	<div><img src="../images/info_16.png" />当前位置：工作流管理-&gt;历史流程实例列表</div>
+	  	<div><img src="../images/info_16.png" /><spring:message code="system.current.page"/>：<spring:message code="flow.management"/>-&gt;<spring:message code="history.instance.list"/></div>
 	  	<div style="width: 100%;height: 400px;padding-top: 6px">
 	    <table id="tableList">
 	    	<thead>
 	    		<tr>
-	    			<th field="count" width="60" align="center">编号</th>
-	    			<th field="id" width="60" align="center">ID</th>
-	    			<th field="processDefinitionId" width="150" align="center">KEY</th>
-	    			<th field="startUserId" width="150" align="center">发起人</th>
-	    			<th field="startTime" width="150" align="center">发起时间</th>
-	    			<th field="opAction" width="150" align="center">操作</th>
+	    			<th field="count" width="60" align="center"><spring:message code="task.num"/></th>
+	    			<th field="id" width="60" align="center"><spring:message code="task.id"/></th>
+	    			<th field="processDefinitionId" width="150" align="center"><spring:message code="instance.key"/></th>
+	    			<th field="startUserId" width="150" align="center"><spring:message code="history.requester"/></th>
+	    			<th field="startTime" width="150" align="center"><spring:message code="history.request.time"/></th>
+	    			<th field="opAction" width="150" align="center"><spring:message code="task.action"/></th>
 	    		</tr>
 	    	</thead>
 	    	<tbody>
