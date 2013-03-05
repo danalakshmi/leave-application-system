@@ -38,7 +38,7 @@
 			    		);
 			    		parentTabs.tabs('select',taskTab.title);
 			    		*/
-			    		parent.$.acflow.addFrameTab({title:'<spring:message code="task.my.task"/>',href:url,isReload:true,frameId:'myTaskFrame',iconCls:'icon-process'});
+			    		parent.$.acflow.addFrameTab({title:'<spring:message code="my.task"/>',href:url,isReload:true,frameId:'myTaskFrame',iconCls:'icon-process'});
 			    		parentTabs.tabs('close',tab.panel('options').title);
 			    	}
 			    }
@@ -65,7 +65,7 @@
 	  				<td colspan="2" align="centre"><b><spring:message code="task.leave.arrpove"/></b></td>
 	  			</tr>
 	  			<tr>
-	  				<td><spring:message code="task.leave.reson"/></td>
+	  				<td><spring:message code="task.reason"/></td>
 	  				<td >
 		   				<c:out value="${leave.employeeName}" /><form:hidden path="employeeName"/><form:hidden path="id"/>
 						 	<spring:message code="task.leave.for"/> 
