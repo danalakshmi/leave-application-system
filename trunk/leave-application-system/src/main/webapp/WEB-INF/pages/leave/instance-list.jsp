@@ -14,14 +14,14 @@
   <!--
   	(function($) {
   		$(document).ready(function(){
-  			$.acflow.tableGrid('#tableList',{title:'流程实例列表'});  			
+  			$.acflow.tableGrid('#tableList',{title:'<spring:message code="instance.list"/>'});  			
   		});
   		
   	})(jQuery);
   
 	function showDiagram(id){
 		var url='${ctx}/leave/show-diagram.do?processInstanceId='+id;
-		parent.$.acflow.addFrameTab({title:'流程图',href:url,isReload:true,frameId:'diagramFrameID1',iconCls:'icon-process'});
+		parent.$.acflow.addFrameTab({title:'<spring:message code="flow.diagram"/>',href:url,isReload:true,frameId:'diagramFrameID1',iconCls:'icon-process'});
 	}
   
 	-->
@@ -30,15 +30,15 @@
 <body>
 	
   	<div id="showLoading" style="margin: 10px">
-	  	<div><img src="../images/info_16.png" />当前位置：工作流管理-&gt;流程实例列表</div>
+	  	<div><img src="../images/info_16.png" /><spring:message code="system.current.page"/>：<spring:message code="flow.management"/>-&gt;<spring:message code="instance.list"/></div>
 	  	<div style="width: 100%;height: 400px;padding-top: 6px">
 	    <table id="tableList">
 	    	<thead>
 	    		<tr>
-	    			<th field="count" width="60" align="center">编号</th>
-	    			<th field="id" width="60" align="center">ID</th>
-	    			<th field="name" width="200" align="center">KEY</th>
-	    			<th field="opAction" width="150" align="center">操作</th>
+	    			<th field="count" width="60" align="center"><spring:message code="task.num"/></th>
+	    			<th field="id" width="60" align="center"><spring:message code="task.id"/></th>
+	    			<th field="name" width="200" align="center"><spring:message code="instance.key"/></th>
+	    			<th field="opAction" width="150" align="center"><spring:message code="task.action"/></th>
 	    		</tr>
 	    	</thead>
 	    	<tbody>
@@ -47,7 +47,7 @@
 	    			<td>${stat.count}</td>
 	    			<td>${processInstance.id}</td>
 	    			<td>${processInstance.businessKey}</td>
-	    			<td><a href="javascript:showDiagram('${processInstance.id}');" >轨迹图</a>
+	    			<td><a href="javascript:showDiagram('${processInstance.id}');" ><spring:message code="instance.track.diagram"/></a>
 	    			</td>
 	    		</tr>
 	    		</c:forEach>
