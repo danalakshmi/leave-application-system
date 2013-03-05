@@ -10,7 +10,7 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "LEAVE")
+@Table(name = "LEAVES")
 public class Leave implements java.io.Serializable{
 
 	private static final long serialVersionUID = -4260996056340122226L;

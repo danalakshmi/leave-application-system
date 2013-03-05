@@ -17,6 +17,15 @@ import com.paul.workflow.service.command.AppServiceCommand;
 
 
 public interface ActFlowService extends BaseService{
+	
+	/**
+	 * 部署默认流程
+	 * @param file
+	 * @return
+	 * @throws IOException
+	 */
+	public Deployment deployProcess(String zipFileName) throws IOException;
+	
 	/**
 	 * 流程部署
 	 * @param file

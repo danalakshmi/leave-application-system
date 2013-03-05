@@ -1,6 +1,7 @@
 package com.paul.workflow.service.impl;
 
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,8 +37,21 @@ import com.paul.workflow.service.command.AppServiceCommand;
 public class ActFlowServiceImpl extends BaseServiceImpl implements ActFlowService {
 	
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED,rollbackFor = Throwable.class)
+	public Deployment deployProcess(String zipFileName) throws IOException {
+		
+		String fullZipFileName = "E:/PAUL/WORK/MyWorkspace/workspace/freelancerj2eeworkspace/leave-application-system/deployment/" + zipFileName;
+		ZipInputStream inputStream = new ZipInputStream(new FileInputStream(fullZipFileName));
+	    
+		getRepositoryService().createDeployment()
+		    .name(zipFileName)
+		    .addZipInputStream(inputStream)
+		    .deploy();
+		return null;
+	}
+	
+	@Transactional(readOnly = false, propagation = Propagation.REQUIRED,rollbackFor = Throwable.class)
 	public Deployment deployProcess(CommonsMultipartFile file) throws IOException{
-		// TODO Auto-generated method stub
+
 		DeploymentBuilder deployment=getRepositoryService().createDeployment();
 		String fileName=file.getOriginalFilename();
 		String ext=StringUtils.substringAfterLast(fileName, ".");
@@ -199,7 +213,5 @@ public class ActFlowServiceImpl extends BaseServiceImpl implements ActFlowServic
 		String ext=StringUtils.substringAfterLast("a.b.c.txt", ".");
 		System.out.println(ext);
 	}
-
-
 
 }
