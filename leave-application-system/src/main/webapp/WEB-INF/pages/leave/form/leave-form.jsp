@@ -46,7 +46,7 @@
 
   	<form:form method="POST" commandName="leave" action="start-process.do">
 	<div id="showLoading" style="margin: 10px">
-	  	<div><img src="../images/info_16.png" /><spring:message code="system.current.page"/>：<spring:message code="flow.management"/>-&gt;<spring:message code="instance.start"/>启动流程</div>
+	  	<div><img src="../images/info_16.png" /><spring:message code="system.current.page"/>：<spring:message code="flow.management"/>-&gt;<spring:message code="instance.start"/></div>
 	  	<div style="width: 100%;height: 400px;padding-top: 6px">
 	  		<table cellpadding="5" cellspacing="10" bgcolor="efefef" >
 	  			<tr>
