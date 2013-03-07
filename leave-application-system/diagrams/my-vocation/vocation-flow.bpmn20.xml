@@ -9,7 +9,7 @@
     <exclusiveGateway id="requestApprovedDecision" name="Request approved?"></exclusiveGateway>
     <serviceTask id="sendApprovalMail" name="Send Confirm Email" activiti:class="com.paul.leave.service.BackwardsCompatibleExpressionDelegate"></serviceTask>
     <endEvent id="endevent1" name="End"></endEvent>
-    <userTask id="adjustVacationRequestTask" name="Adjust Leave Application" activiti:assignee="${employeeName}" activiti:formKey="leave/adjust-form">
+    <userTask id="adjustVacationRequestTask" name="Adjust Leave Application" activiti:assignee="${employeeName}" activiti:formKey="leave/form/adjust-form">
       <documentation>Your manager has not approved your vacation request.</documentation>
     </userTask>
     <exclusiveGateway id="resendRequestDecision" name="Resend request?"></exclusiveGateway>
