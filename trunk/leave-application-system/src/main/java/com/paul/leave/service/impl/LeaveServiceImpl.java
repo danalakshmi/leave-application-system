@@ -22,15 +22,15 @@ public class LeaveServiceImpl implements LeaveService {
 	}
 
 	public void update(Leave leave) {
-		leaveDao.update(leave);
+		leaveDao.save(leave);
 	}
 
 	public void delete(Leave leave) {
-		leaveDao.delete(leave);
+		leaveDao.remove(leave);
 	}
 
 	public Leave findByLeaveCode(String id) {
-		return leaveDao.findByLeaveCode(id);
+		return leaveDao.find(id);
 	}
 
 	public LeaveDao getLeaveDao() {
